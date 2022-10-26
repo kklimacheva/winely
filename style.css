@@ -5,12 +5,15 @@ body {
     margin-left: 1%;
     margin-right: 1%;
     background-color: #1f1e1e;
-    color: #dad9d9;
-    font-family: Gill Sans, sans-serif;
+    color: #bfbebb;
+    /*font-family: Didact Gothic, sans-serif;*/
+    /*font-family: Montserrat, sans-serif;*/
+    font-family: 'Circe SV Regular', Circe, PT Sans, Verdana, sans-serif;
     min-height: 100%;
-    font-size: medium;
+    font-size: 15px;
     text-align: left;
     white-space: normal;
+    word-spacing: normal;
 }
 h2{
     font-weight: bold;
@@ -80,6 +83,10 @@ blockquote{
 .phrase{
     text-decoration-line: line-through;
     text-transform: uppercase;
+    font-style: italic;
+}
+.menu-section ~ p{
+    color: #a86d7b;
 }
 footer{
     bottom: 0;
