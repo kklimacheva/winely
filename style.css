@@ -15,53 +15,48 @@ body {
     white-space: normal;
     word-spacing: normal;
 }
+article{
+    margin-top: 70px;
+}
 h2{
     font-weight: bold;
-    text-decoration-line: underline;
 }
 p{
     font-weight: 200;
     line-height: 125%;
-    text-indent: 10px;
-}
-.background-img{
-    width: 100%;
-    filter: drop-shadow(2px 2px 3px #141414);
-    opacity: 0.2;
 }
 .top-menu {
     background-color: #141414;
-    /*position: fixed;*/
+    position: fixed;
     top: 0;
     width: 100%;
-    height: 75px;
+    height: 60px;
+    opacity: 0.85;
+    z-index: 12;
 }
 .navbar-logo {
-    margin-top: 4px;
+    margin-top: 3px;
     float: left;
-    width: 45px;
-    height: 65px;
+    height: 55px;
+    order: 1;
 }
-.navbar-name{
-    text-align: center;
-    display: inline-block;
-}
-
-#name{
-   margin: 3% 20% 3% 20%;
+.name{
     width: 110px;
     height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 .menu-main {
+    display: flex;
     list-style: none;
-    font-family: Gill Sans, sans-serif;
-    /*margin: -7% 0 0 0;*/
     padding: 0;
     float: right;
     background-color: #141414;
     text-align: center;
 }
 .menu-main li {
+    margin-top: 5px;
+    margin-right: 15px;
     display: inline-block;
 }
 .menu-main a {
@@ -74,19 +69,71 @@ p{
 .menu-main a:hover {
     color: #a86d7b;
 }
+.about-section{
+    position: relative;
+    padding: 20px;
+    height: 400px;
+    align-content: center;
+}
+.about-section::before {
+    content: "";
+    background-image: url("images/field.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+}
+.article-section{
+    position: relative;
+    padding: 20px;
+    height: 400px;
+    align-content: center;
+}
+.article-section::before {
+    margin-top: 10px;
+    content: "";
+    background-image: url("images/bottles.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.15;
+}
 a{
     text-decoration: none;
 }
-blockquote{
-    font-family: Gill Sans, sans-serif;
+a:hover {
+    color: #a86d7b;
 }
 .phrase{
-    text-decoration-line: line-through;
     text-transform: uppercase;
-    font-style: italic;
 }
-.menu-section ~ p{
-    color: #a86d7b;
+table, th, td{
+    border: 1px solid #40363d;
+}
+table{
+    margin-top: 5px;
+    width: 100%;
+    border-collapse: collapse;
+    display: grid;
+    grid-template-columns: 19% 27% 27% 27%;
+}
+thead, tbody, tr{
+    display: contents;
+}
+.wine-type{
+    font-weight: bold;
+}
+tr:nth-child(odd) td{
+    background-color: #3b3b3a;
+}
+tr:nth-child(even) td{
+    background-color: #1f1e1e;
 }
 footer{
     bottom: 0;
