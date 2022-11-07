@@ -166,4 +166,7 @@ footer{
     .ad {
         display: none;
     }
+    .name{
+        display: none;
+    }
 }
