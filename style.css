@@ -36,15 +36,13 @@ p{
     z-index: 12;
 }
 .navbar-logo {
-    margin-top: 3px;
     float: left;
-    height: 55px;
+    height: 100%;
     order: 1;
 }
 .name{
-    width: 110px;
-    height: 40px;
-    margin-top: 10px;
+    height: 70%;
+    margin-top: 7px;
     margin-left: 10px;
 }
 .menu-main {
@@ -154,7 +152,7 @@ tr:nth-child(even) td{
 .article-img{
     width: 100%;
     height: 400px;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 footer{
     padding-top: 15px;
