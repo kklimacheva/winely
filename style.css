@@ -19,6 +19,7 @@ body {
 article{
     margin-top: 50px;
 }
+
 h2{
     font-weight: bold;
 }
@@ -152,6 +153,8 @@ tr:nth-child(even) td{
 .article-img{
     width: 100%;
     height: 400px;
+    object-fit: cover;
+    object-position: top;
     opacity: 0.8;
 }
 footer{
