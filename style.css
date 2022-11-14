@@ -7,8 +7,9 @@ body {
     margin-right: 1%;
     background-color: #1f1e1e;
     color: #bfbebb;
-    /*font-family: Didact Gothic, sans-serif;*/
-    font-family: 'Circe SV Regular', Circe, PT Sans, Verdana, sans-serif;
+    /*font-family: Didact Gothic, sans-serif;
+    font-family: 'Circe SV Regular', Circe, PT Sans, Verdana, sans-serif;*/
+    font-family: Montserrat, sans-serif;
     min-height: 100%;
     font-size: 15px;
     text-align: left;
