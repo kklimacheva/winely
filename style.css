@@ -136,6 +136,7 @@ a{
 .gallery{
     display: flex;
     overflow-x: auto;
+    column-gap: 5px;
 }
 .gallery-item {
     min-width: 400px;
