@@ -7,6 +7,9 @@
     <title>Winely</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="js/config.js"></script>
+    <script src="js/loadingTime.js"></script>
+    <script src="js/navLocation.js"></script>
 </head>
 <body>
 <header>
@@ -14,9 +17,9 @@
         <a href="index.html"><img class="navbar-logo" src="images/logo.png"></a>
         <img class="name" src="images/logo_name.png">
         <ul class="menu-main">
-            <li><a href="#about us">О нас</a></li>
-            <li><a href="#articles">Статьи</a></li>
-            <li><a href="#shop">Магазин</a></li>
+            <li><a class="navbar-button" href="index.html">О нас</a></li>
+            <li><a class="navbar-button" href="articles.html">Статьи</a></li>
+            <li><a class="navbar-button" href="shop.html">Магазин</a></li>
         </ul>
     </nav>
 </header>
@@ -55,7 +58,7 @@
             <!--img class="background-img" src="images/bottles.jpg"-->
             <div class="gallery-wrapper">
                 <div class="gallery">
-                    <div class="gallery-item"><img src="images/bottles.jpg"></div>
+                    <div class="gallery-item"><img src="images/winebottle3.jpg"></div>
                     <div class="gallery-item"><img src="images/winebottles.jpg"></div>
                     <div class="gallery-item"><img src="images/winebottle1.jpg"></div>
                     <div class="gallery-item"><img src="images/winebottle2.jpg"></div>
@@ -107,6 +110,7 @@
         <img class="ad-img" src="images/ad.png">
     </div>
     <p>Since 2022</p>
+    <div class="loadInformation" id="loadInformation">Время загрузки страницы: </div>
 </footer>
 </body>
 </html>

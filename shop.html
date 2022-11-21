@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Winely</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="js/config.js"></script>
+    <script src="js/loadingTime.js"></script>
+    <script src="js/navLocation.js"></script>
+</head>
+<body>
+<header>
+    <nav class="top-menu">
+        <a href="index.html"><img class="navbar-logo" src="images/logo.png"></a>
+        <img class="name" src="images/logo_name.png">
+        <ul class="menu-main">
+            <li><a href="index.html">О нас</a></li>
+            <li><a href="articles.html">Статьи</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+        </ul>
+    </nav>
+</header>
+<article>
+    <section class="shop-section" id="shop-page">
+        <p><a name="shop"></a></p>
+        <h2 class="menu-section">Магазин</h2>
+        <!--img class="background-img" src="images/bottles.jpg"-->
+        <div class="gallery-wrapper">
+            <div class="gallery">
+                <div class="gallery-item"><img src="images/bottles.jpg"></div>
+                <div class="gallery-item"><img src="images/winebottles.jpg"></div>
+                <div class="gallery-item"><img src="images/winebottle1.jpg"></div>
+                <div class="gallery-item"><img src="images/winebottle2.jpg"></div>
+            </div>
+        </div>
+        Лучшие вина:
+        <table>
+            <thead>
+            <tr>
+                <th>Тип вина</th>
+                <th>Красное вино</th>
+                <th>Белое вино</th>
+                <th>Розовое вино</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="wine-type">Сухое</td>
+                <td>"Astrale" Rosso, Италия</td>
+                <td>Brancott Estate,
+                    Marlborough Sauvignon Blanc, Новая Зеландия</td>
+                <td>Rignana, Sangiovese Rosato, Toscana IGT, Италия</td>
+            </tr>
+            <tr>
+                <td class="wine-type">П/с</td>
+                <td>Cielo e Terra, "Primasole" Primitivo, Puglia IGT, Италия</td>
+                <td>"Toucas", Vinho Verde DOC, Португалия</td>
+                <td>Mare Alta vinho verde Rose, Португалия</td>
+            </tr>
+            <tr>
+                <td class="wine-type">П/сл</td>
+                <td>Vizconde de Begijar, Испания</td>
+                <td>Santa Luz Alba Moscato, Чили</td>
+                <td>Sanprimo Rosato Puglia, Италия</td>
+            </tr>
+            <tr>
+                <td class="wine-type">Сладкое</td>
+                <td>Nectar Pedro Ximenez, Испания</td>
+                <td>Concha y Toro, "Frontera" Moscato, Чили</td>
+                <td>"Tussock Jumper" Moscato Rose, Испания</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</article>
+<footer>
+    <div class="loadInformation" id="loadInformation">Время загрузки страницы: </div>
+</footer>
+</body>
+</html>

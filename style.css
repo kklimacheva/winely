@@ -7,8 +7,9 @@ body {
     margin-right: 1%;
     background-color: #1f1e1e;
     color: #bfbebb;
-    /*font-family: Didact Gothic, sans-serif;*/
-    font-family: 'Circe SV Regular', Circe, PT Sans, Verdana, sans-serif;
+    /*font-family: Didact Gothic, sans-serif;
+    font-family: 'Circe SV Regular', Circe, PT Sans, Verdana, sans-serif;*/
+    font-family: Montserrat, sans-serif;
     min-height: 100%;
     font-size: 15px;
     text-align: left;
@@ -41,6 +42,9 @@ p{
     float: left;
     height: 100%;
     order: 1;
+}
+.navbar-button{
+
 }
 .name{
     height: 70%;
@@ -132,6 +136,7 @@ a{
 .gallery{
     display: flex;
     overflow-x: auto;
+    column-gap: 5px;
 }
 .gallery-item {
     min-width: 400px;
@@ -188,4 +193,13 @@ footer{
     .name{
         display: none;
     }
+}
+.loadInformation {
+    font-size: 15px;
+    text-align: left;
+    color: #a86d7b;
+    text-indent: 0;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
 }
