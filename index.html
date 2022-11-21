@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="wine, shop, blog, wine news">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winely</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -10,9 +11,8 @@
 <body>
 <header>
     <nav class="top-menu">
-        <img class="navbar-logo" src="images/logo.png">
-        <img id="name" src="images/logo_name.png">
-        <!--<img class="navbar-name" src="images/logo_name.png"-->
+        <a href="index.html"><img class="navbar-logo" src="images/logo.png"></a>
+        <img class="name" src="images/logo_name.png">
         <ul class="menu-main">
             <li><a href="#about us">О нас</a></li>
             <li><a href="#articles">Статьи</a></li>
@@ -22,7 +22,7 @@
 </header>
 <main>
     <article>
-        <section>
+        <section class="about-section">
             <p><a name="about us"></a></p>
             <h2 class="menu-section">О нас</h2>
             <p><b>Winely</b>
@@ -32,24 +32,80 @@
                 ваших любимых сортах винограда и регионах, держать вас в курсе последних винных
                 тенденций и сделать ваши винные приключения максимально полезными. Вино предназначено
                 для всех. Оно должно быть веселым, непринужденным и не пугающим.</p>
-            <img class="background-img" src="images/field.jpg" alt="красиво?">
+            <!--img class="background-img" src="images/field.jpg" alt="красиво?"-->
             <p class="phrase">Пейте вино и будете здоровы!</p>
         </section>
-        <section>
+        <section class="article-section">
             <p><a name="articles"></a></p>
             <h2 class="menu-section">Статьи</h2>
-            <p>Разные статьи про вино</p>
             <blockquote>Нет ничего лучше, чем старая дружба и старое вино.<cite> - Английская пословица</cite></blockquote>
-            <img class="background-img" src="images/barrels.jpg">
+            <h3><a href="Georgian-wine.html">Виноделие Грузии</a></h3>
+            <div class="article-list">
+            <p class="article">«Грузинское вино будет существовать до тех пор, пока жив хотя бы один грузин»...
+                <a class="continue-reading" href="Georgian-wine.html">читать далее</a></p>
+            <h3><a href="Slovakian-wine.html">Виноделие Словакии</a></h3>
+            <p class="article">Как и в любой другой части мира, выбор сортов продиктован климатом и традициями.
+                До начала глобального потепления...<a class="continue-reading" href="Slovakian-wine.html">читать далее</a></p>
+            </div>
+            <!--img class="background-img" src="images/barrels.jpg"-->
         </section>
-        <section>
+        <section class="shop-section">
             <p><a name="shop"></a></p>
             <h2 class="menu-section">Магазин</h2>
-            <img class="background-img" src="images/bottles.jpg">
+            <!--img class="background-img" src="images/bottles.jpg"-->
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <div class="gallery-item"><img src="images/bottles.jpg"></div>
+                    <div class="gallery-item"><img src="images/winebottles.jpg"></div>
+                    <div class="gallery-item"><img src="images/winebottle1.jpg"></div>
+                    <div class="gallery-item"><img src="images/winebottle2.jpg"></div>
+                </div>
+            </div>
+            Лучшие вина:
+            <table>
+                <thead>
+                <tr>
+                    <th>Тип вина</th>
+                    <th>Красное вино</th>
+                    <th>Белое вино</th>
+                    <th>Розовое вино</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="wine-type">Сухое</td>
+                    <td>"Astrale" Rosso, Италия</td>
+                    <td>Brancott Estate,
+                        Marlborough Sauvignon Blanc, Новая Зеландия</td>
+                    <td>Rignana, Sangiovese Rosato, Toscana IGT, Италия</td>
+                </tr>
+                <tr>
+                    <td class="wine-type">П/с</td>
+                    <td>Cielo e Terra, "Primasole" Primitivo, Puglia IGT, Италия</td>
+                    <td>"Toucas", Vinho Verde DOC, Португалия</td>
+                    <td>Mare Alta vinho verde Rose, Португалия</td>
+                </tr>
+                <tr>
+                    <td class="wine-type">П/сл</td>
+                    <td>Vizconde de Begijar, Испания</td>
+                    <td>Santa Luz Alba Moscato, Чили</td>
+                    <td>Sanprimo Rosato Puglia, Италия</td>
+                </tr>
+                <tr>
+                    <td class="wine-type">Сладкое</td>
+                    <td>Nectar Pedro Ximenez, Испания</td>
+                    <td>Concha y Toro, "Frontera" Moscato, Чили</td>
+                    <td>"Tussock Jumper" Moscato Rose, Испания</td>
+                </tr>
+                </tbody>
+            </table>
         </section>
     </article>
 </main>
 <footer>
+    <div class="ad">
+        <img class="ad-img" src="images/ad.png">
+    </div>
     <p>Since 2022</p>
 </footer>
 </body>
