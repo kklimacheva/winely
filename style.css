@@ -43,6 +43,9 @@ p{
     height: 100%;
     order: 1;
 }
+.navbar-button{
+
+}
 .name{
     height: 70%;
     margin-top: 9px;
@@ -189,4 +192,13 @@ footer{
     .name{
         display: none;
     }
+}
+.loadInformation {
+    font-size: 15px;
+    text-align: left;
+    color: #a86d7b;
+    text-indent: 0;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
 }
