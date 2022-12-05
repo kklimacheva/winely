@@ -1,5 +1,6 @@
 const toBuyList = document.getElementsByClassName("form__toBuy")[0];
 const toBuyInput = document.getElementsByClassName("form")[0];
+const template = document.getElementById("template");
 let toBuyArray = [];
 
 
@@ -10,7 +11,7 @@ toBuyInput.addEventListener("submit", function (e){
     if (wine !== "") {
         const toBuy = {
             wine: formData.get("wine"),
-            done: false,
+            isChecked: false,
             id: Date.now() + Math.random().toString(36).slice(2)
         };
         toBuyArray.push(toBuy);
@@ -19,9 +20,9 @@ toBuyInput.addEventListener("submit", function (e){
     }
 });
 
-function store(toBuyArr){
-    localStorage.setItem("listTodo", JSON.stringify(toBuyArr));
-    displayToBuyList(toBuyArr);
+function store(toBuyArray){
+    localStorage.setItem("listTodo", JSON.stringify(toBuyArray));
+    displayToBuyList(toBuyArray);
 }
 
 function getFromStorage(){
@@ -38,19 +39,26 @@ function clearStorage(){
     displayToBuyList(toBuyArray);
 }
 
-function displayToBuyList(toBuyArr){
+function displayToBuyList(toBuyArray){
     toBuyList.innerHTML = '';
-    toBuyArr.forEach(function (toBuy) {
-        const div = document.createElement("div");
-        div.setAttribute("class", "toBuyList__item")
-        div.setAttribute("id", toBuy.id);
-        div.innerHTML = `
-            <input type="checkbox" class="checkbox ${toBuy.id}">
-            ${toBuy.wine}
-            <button class="delete__button">Delete</button>
-        `;
-        toBuyList.append(div);
+    toBuyArray.forEach(function (toBuy) {
+        const item = template.content.cloneNode(true);
+        const itemList = item.querySelector(".toBuy-list__item");
+        const isChecked = toBuy.isChecked ? "checked" : null;
+        itemList.setAttribute("id", toBuy.id);
+        item.querySelector('input').setAttribute(isChecked, isChecked);
+        itemList.querySelector("span").textContent = toBuy.wine;
+        toBuyList.append(item);
     })
+}
+
+function CheckItem(id){
+    for (let i = 0; i < toBuyArray.length; i++){
+        if (toBuyArray[i].id === id){
+            toBuyArray[i].isChecked = !toBuyArray[i].isChecked;
+        }
+    }
+    store(toBuyArray);
 }
 
 function deleteToBuy(id){
@@ -64,7 +72,11 @@ getFromStorage();
 
 toBuyList.addEventListener('click', (event) => {
     const isButton = event.target.classList.contains("delete__button");
+    const isCheckBox = event.target.classList.contains("checkbox");
     if (isButton){
         deleteToBuy(event.target.parentElement.id);
+    }
+    if(isCheckBox){
+        CheckItem(event.target.parentElement.id);
     }
 })
