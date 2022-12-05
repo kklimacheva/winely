@@ -71,7 +71,7 @@ p{
     font-weight: bold;
     width: 100px;
 }
-.menu-main a:hover {
+a:hover {
     color: #a86d7b;
 }
 .about-section{
@@ -152,12 +152,18 @@ a{
 table, th, td{
     border: 1px solid #40363d;
 }
-table{
+.wine-table{
     margin-top: 5px;
     width: 100%;
     border-collapse: collapse;
     display: grid;
     grid-template-columns: 19% 27% 27% 27%;
+}
+table{
+    margin-top: 5px;
+    width: fit-content;
+    border-collapse: collapse;
+    display: grid;
 }
 thead, tbody, tr{
     display: contents;
@@ -203,3 +209,21 @@ footer{
     padding: 10px;
     border-radius: 10px;
 }
+
+input {
+    font-size: 15px;
+    text-align: left;
+    color: #1f1e1e;
+    margin: 5px;
+    padding: 10px;
+    background-color: #bfbebb;
+}
+
+input[type='submit'] {
+    background-color: #fff;
+    color: #000;
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+}
+
