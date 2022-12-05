@@ -1,19 +1,22 @@
-const toBuyList = document.getElementsByClassName("constructor__todo")[0];
-const toBuyInput = document.getElementsByClassName("constructor__form")[0];
+const toBuyList = document.getElementsByClassName("form__toBuy")[0];
+const toBuyInput = document.getElementsByClassName("form")[0];
 let toBuyArr = [];
 
 
 toBuyInput.addEventListener("submit", function (e){
     e.preventDefault();
     const formData = new FormData(toBuyInput);
-    const toBuy = {
-        name: formData.get("wine"),
-        done: false,
-        id: Date.now() + Math.random().toString(36).slice(2)
-    };
-    toBuyArr.push(toBuy);
-    toBuyInput.reset();
-    store(toBuyArr);
+    let wine = formData.get("wine");
+    if (wine !== "") {
+        const toBuy = {
+            wine: formData.get("wine"),
+            done: false,
+            id: Date.now() + Math.random().toString(36).slice(2)
+        };
+        toBuyArr.push(toBuy);
+        toBuyInput.reset();
+        store(toBuyArr);
+    }
 });
 
 function store(todoArr){
