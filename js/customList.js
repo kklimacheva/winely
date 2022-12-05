@@ -42,13 +42,13 @@ function clearStorage(){
 function displayToBuyList(toBuyArray){
     toBuyList.innerHTML = '';
     toBuyArray.forEach(function (toBuy) {
-        const item = template.content.cloneNode(true);
-        const itemList = item.querySelector(".toBuy-list__item");
+        const clone = template.content.cloneNode(true);
+        const item = clone.querySelector(".toBuy-list__item");
         const isChecked = toBuy.isChecked ? "checked" : null;
-        itemList.setAttribute("id", toBuy.id);
-        item.querySelector('input').setAttribute(isChecked, isChecked);
-        itemList.querySelector("span").textContent = toBuy.wine;
-        toBuyList.append(item);
+        item.setAttribute("id", toBuy.id);
+        clone.querySelector('input').setAttribute(isChecked, isChecked);
+        item.querySelector("span").textContent = toBuy.wine;
+        toBuyList.append(clone);
     })
 }
 
