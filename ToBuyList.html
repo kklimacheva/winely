@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="wine, shop, blog, wine news">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-buy list</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="js/config.js"></script>
+    <script src="js/loadingTime.js"></script>
+    <script src="js/navLocation.js"></script>
+    <script defer src="js/customList.js"></script>
+</head>
+<body>
+<header>
+    <nav class="top-menu">
+        <a href="index.html"><img class="navbar-logo" src="images/logo.png"></a>
+        <img class="name" src="images/logo_name.png">
+        <ul class="menu-main">
+            <li><a href="index.html">О нас</a></li>
+            <li><a href="articles.html">Статьи</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+        </ul>
+    </nav>
+</header>
+<article>
+    <form class="form">
+        <label class="form__input__wine-label">Какое вино хотите добавить?</label>
+        <input name="wine" type="text" size="30" placeholder="Название">
+        <input type="submit" class="submit__button">
+    </form>
+    <button class="clear__button" onclick="clearStorage()">Delete all</button>
+    <div class="form__toBuy">
+        <template id="template">
+            <div class="toBuy-list__item">
+                <input type="checkbox" class="checkbox">
+                <span></span>
+            <button class="delete__button">Delete</button>
+            </div>
+        </template>
+    </div>
+</article>
+<footer></footer>
+</body>
+</html>
