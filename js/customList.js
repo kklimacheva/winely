@@ -1,6 +1,6 @@
 const toBuyList = document.getElementsByClassName("form__toBuy")[0];
 const toBuyInput = document.getElementsByClassName("form")[0];
-let toBuyArr = [];
+let toBuyArray = [];
 
 
 toBuyInput.addEventListener("submit", function (e){
@@ -13,36 +13,36 @@ toBuyInput.addEventListener("submit", function (e){
             done: false,
             id: Date.now() + Math.random().toString(36).slice(2)
         };
-        toBuyArr.push(toBuy);
+        toBuyArray.push(toBuy);
         toBuyInput.reset();
-        store(toBuyArr);
+        store(toBuyArray);
     }
 });
 
-function store(todoArr){
-    localStorage.setItem("listTodo", JSON.stringify(todoArr));
-    displayToBuyList(todoArr);
+function store(toBuyArr){
+    localStorage.setItem("listTodo", JSON.stringify(toBuyArr));
+    displayToBuyList(toBuyArr);
 }
 
 function getFromStorage(){
     const ref = localStorage.getItem("listTodo");
     if (ref){
-        toBuyArr = JSON.parse(ref);
-        displayToBuyList(toBuyArr);
+        toBuyArray = JSON.parse(ref);
+        displayToBuyList(toBuyArray);
     }
 }
 
 function clearStorage(){
     localStorage.removeItem("listTodo");
-    toBuyArr.splice(0, toBuyArr.length);
-    displayToBuyList(toBuyArr);
+    toBuyArray.splice(0, toBuyArray.length);
+    displayToBuyList(toBuyArray);
 }
 
-function displayToBuyList(todoArr){
+function displayToBuyList(toBuyArr){
     toBuyList.innerHTML = '';
-    todoArr.forEach(function (todo) {
+    toBuyArr.forEach(function (todo) {
         const div = document.createElement("div");
-        div.setAttribute("class", "todo-list__item")
+        div.setAttribute("class", "toBuyList__item")
         div.setAttribute("id", todo.id);
         div.innerHTML = `
             <input type="checkbox" class="checkbox ${todo.id}">
@@ -54,10 +54,10 @@ function displayToBuyList(todoArr){
 }
 
 function deleteTodo(id){
-    toBuyArr = toBuyArr.filter(function (todo) {
+    toBuyArray = toBuyArray.filter(function (todo) {
         return todo.id !== id;
     });
-    store(toBuyArr);
+    store(toBuyArray);
 }
 
 getFromStorage();
