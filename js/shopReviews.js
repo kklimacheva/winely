@@ -7,7 +7,7 @@ async function loadReviews() {
     let response;
     let comments;
 
-    loadingSection.innerHTML += `
+    loadingSection.innerHTML = `
             <div class="preloader"></div>
         `;
 
