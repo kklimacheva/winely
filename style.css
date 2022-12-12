@@ -224,6 +224,7 @@ button {
     margin-top: 1em;
     margin-left: 1em;
     background-color: #b2b2b2;
+    font-weight: 400;
 }
 
 .preloader {

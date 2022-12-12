@@ -11,8 +11,12 @@ async function loadReviews() {
             <div class="preloader"></div>
         `;
 
-    response = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomNumber}/comments`);
-    comments = await response.json();
+    try {
+        response = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomNumber}/comments`);
+        comments = await response.json();
+    } catch(error) {
+        alert("Oops! Something went wrong.")
+    }
 
     loadingSection.innerHTML = ''
 
