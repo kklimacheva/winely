@@ -7,8 +7,6 @@ body {
     margin-right: 1%;
     background-color: #1f1e1e;
     color: #bfbebb;
-    /*font-family: Didact Gothic, sans-serif;
-    font-family: 'Circe SV Regular', Circe, PT Sans, Verdana, sans-serif;*/
     font-family: Montserrat, sans-serif;
     min-height: 100%;
     font-size: 15px;
@@ -93,26 +91,6 @@ a:hover {
     left: 0;
     opacity: 0.2;
 }
-/*.article-section{
-    position: relative;
-    padding: 20px;
-    height: 400px;
-    align-content: center;
-    overflow: hidden;
-    color: #bfbebb;
-}
-.article-section::before {
-    margin-top: 10px;
-    content: "";
-    background-image: url("images/bottles.jpg");
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.15;
-}*/
 .article-section a:hover {
     color: #a86d7b;
 }
@@ -226,3 +204,43 @@ input[type=checkbox]:checked + span {
     text-decoration: line-through;
 }
 
+.reviewItem {
+    font-size: 15px;
+    text-align: left;
+    color: #bfbebb;
+    text-indent: 0;
+    margin: 3% 6% 6% 6%;
+    padding: 15px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    width: 85%;
+}
+
+button {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-left: 1em;
+    background-color: #b2b2b2;
+    font-weight: 400;
+}
+
+.preloader {
+    height: 50px;
+    width: 50px;
+    border: 5px solid #bfbebb;
+    border-top: 5px solid #9f566a;
+    border-radius: 50%;
+    animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
